@@ -1,6 +1,6 @@
 // TODO: Include packages needed for this application
-const inquirer = require('inquirer');
-const fs = require('fs');
+import fs from "fs";
+import inquirer from "inquirer";
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -50,6 +50,34 @@ const questions = [
         message: 'What is your email address?',
     },
 ];
+
+function generateReadme(answers) {
+    return `
+  # ${answers.title}
+  
+  ## Description
+  ${answers.description}
+  
+  ## Installation
+  ${answers.installation}
+  
+  ## Usage
+  ${answers.usage}
+  
+  ## Contribution
+  ${answers.contribution}
+  
+  ## Tests
+  ${answers.tests}
+  
+  ## License
+  ${answers.license !== 'None' ? `![License Badge](https://img.shields.io/badge/License-${answers.license.replace(' ', '%20')}-blue.svg)` : ''}
+  
+  ## Questions
+  If you have any questions about the project, you can contact me at [${answers.email}](mailto:${answers.email}).
+  You can also find more of my work at [${answers.github}](https://github.com/${answers.github}).
+  `;
+}
 
 
 // TODO: Create a function to write README file
