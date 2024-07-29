@@ -1,8 +1,6 @@
 // TODO: Include packages needed for this application
-import { ChildProcess } from "child_process";
 import fs from "fs";
 import inquirer from "inquirer";
-import { type } from "os";
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -54,14 +52,25 @@ const questions = [
 ];
 
 
-
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    
+    fs.writeFile(fileName, data, (err) => {
+        if (err) {
+            console.error('Error writing file:', err);
+        }
+        else {
+            console.log('File has been written successfully');
+        }
+    });
 }
-
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        const readmeContent = generateReadme(answers);
+        writeToFile('README.md', readmeContent);
+        console.log('README.md has been generated!');
+    });
+}
 
 // Function call to initialize app
 init();
