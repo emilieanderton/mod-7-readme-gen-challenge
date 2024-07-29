@@ -1,4 +1,5 @@
 // TODO: Include packages needed for this application
+import { ChildProcess } from "child_process";
 import fs from "fs";
 import inquirer from "inquirer";
 import { type } from "os";
@@ -16,7 +17,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'installation'
+        name: 'installation',
         message: 'What are the installation instructions?',
     },
     {
@@ -34,13 +35,30 @@ const questions = [
         name: 'tests',
         message: 'What are the test instructions?',
     },
-    
+    {
+        type: 'input',
+        name: 'license',
+        message: 'Choose a license for your project',
+        choices: ['MIT', 'Apache 2.0', 'GNU GPL v3', 'Mozilla Public License 2.0', 'BSD 3-Clause license', 'None'],
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your Github username?',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?',
+    },
 ];
 
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    
+}
 
 // TODO: Create a function to initialize app
 function init() {}
