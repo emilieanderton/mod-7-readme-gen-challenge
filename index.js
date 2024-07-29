@@ -29,12 +29,12 @@ const questions = [
         message: 'What are the contribution guidelines?',
     },
     {
-        type: 'input',
+        type: 'input', 
         name: 'tests',
         message: 'What are the test instructions?',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Choose a license for your project',
         choices: ['MIT', 'Apache 2.0', 'GNU GPL v3', 'Mozilla Public License 2.0', 'BSD 3-Clause license', 'None'],
