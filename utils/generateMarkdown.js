@@ -52,11 +52,4 @@ ${renderLicenseSection(data.license)}
 `;
 }
 
-const exampleData = {
-  title: 'Project Title',
-  description: 'Project Description',
-  license: 'MIT'
-};
- console.log(generateMarkdown(exampleData));
-
 export default generateMarkdown;

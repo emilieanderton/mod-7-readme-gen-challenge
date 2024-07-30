@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 import fs from "fs";
 import inquirer from "inquirer";
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -29,7 +30,7 @@ const questions = [
         message: 'What are the contribution guidelines?',
     },
     {
-        type: 'input', 
+        type: 'input',
         name: 'tests',
         message: 'What are the test instructions?',
     },
@@ -57,6 +58,13 @@ function generateReadme(answers) {
   
   ## Description
   ${answers.description}
+
+  ## Table of Contents
+- [installation](#Installation)
+- [Usage](#Usage)
+- [Contribution](#Contribution)
+- [Tests](#Tests)
+- [License](#License)
   
   ## Installation
   ${answers.installation}
@@ -71,10 +79,10 @@ function generateReadme(answers) {
   ${answers.tests}
   
   ## License
-  ${answers.license !== 'None' ? `![License Badge](https://img.shields.io/badge/License-${answers.license.replace(' ', '%20')}-blue.svg)` : ''}
+  ${answers.license}
   
   ## Questions
-  If you have any questions about the project, you can contact me at [${answers.email}](mailto:${answers.email}).
+  If you have any questions about this project, you can contact me at [${answers.email}](mailto:${answers.email}).
   You can also find more of my work at [${answers.github}](https://github.com/${answers.github}).
   `;
 }
