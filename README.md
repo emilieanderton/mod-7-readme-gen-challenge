@@ -1,8 +1,8 @@
 
-  # title
+  # j
   
   ## Description
-  descr
+  jj
 
   ## Table of Contents
 - [installation](#Installation)
@@ -12,21 +12,23 @@
 - [License](#License)
   
   ## Installation
-  install
+  jjj
   
   ## Usage
-  usage
+  jjjj
   
   ## Contribution
-  contri
+  jjj
   
   ## Tests
-  test
+  jjjjj
   
   ## License
-  MIT
+   ## License
+
+This project is licensed under the MIT. For more information, see the [license link](https://opensource.org/licenses/MIT).
   
   ## Questions
-  If you have any questions about this project, you can contact me at [emiliev99@hotmail.com](mailto:emiliev99@hotmail.com).
-  You can also find more of my work at [emilie.anderton](https://github.com/emilie.anderton).
+  If you have any questions about this project, you can contact me at [jjeje](mailto:jjeje).
+  You can also find more of my work at [kjekrje](https://github.com/kjekrje).
   

@@ -53,3 +53,4 @@ ${renderLicenseSection(data.license)}
 }
 
 export default generateMarkdown;
+export { renderLicenseBadge, renderLicenseSection };
