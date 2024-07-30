@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 import fs from "fs";
 import inquirer from "inquirer";
-import { renderLicenseSection } from "./utils/generateMarkdown.js";
+import renderLicenseBadge, { renderLicenseSection } from "./utils/generateMarkdown.js";
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -54,8 +54,9 @@ const questions = [
 ];
 
 function generateReadme(answers) {
-    return `
+    return ` 
   # ${answers.title}
+//   ${renderLicenseBadge(license)}
   
   ## Description
   ${answers.description}
