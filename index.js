@@ -79,8 +79,7 @@ function generateReadme(answers) {
   ## Tests
   ${answers.tests}
   
-  ## License
-   ${renderLicenseSection(answers.license)}
+ ${renderLicenseSection(answers.license)}
   
   ## Questions
   If you have any questions about this project, you can contact me at [${answers.email}](mailto:${answers.email}).
