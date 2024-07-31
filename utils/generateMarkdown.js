@@ -13,9 +13,8 @@ function renderLicenseBadge(license) {
     return '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
 } else if (license === 'None') {
     return '';
-} else {
-    return '';
 }
+return renderLicenseBadge[license] || '';
 }
 
 console.log(renderLicenseBadge(''));
@@ -45,18 +44,40 @@ This project is licensed under the ${license}. For more information, see the [li
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-  ${renderLicenseBadge(data.license)}
+function generateReadme(answers) {
+  return `
+# ${answers.title}
+  ${renderLicenseBadge(answers.license)}
 
 ## Description
+${answers.description}
 
-${data.description}
+## Table of Contents
+- [installation](#Installation)
+- [Usage](#Usage)
+- [Contribution](#Contribution)
+- [Tests](#Tests)
+- [License](#License)
 
-${renderLicenseSection(data.license)}
+## Installation
+${answers.installation}
+
+## Usage
+${answers.usage}
+
+## Contribution
+${answers.contribution}
+
+## Tests
+${answers.tests}
+
+${renderLicenseSection(answers.license)}
+
+## Questions
+If you have any questions about this project, you can contact me at [${answers.email}](mailto:${answers.email}).
+You can also find more of my work at [${answers.github}](https://github.com/${answers.github}).
 `;
 }
 
-export default generateMarkdown;
+export default generateReadme;
 export { renderLicenseBadge, renderLicenseSection };
